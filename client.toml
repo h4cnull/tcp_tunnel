@@ -1,0 +1,7 @@
+server_addr = "127.0.0.1:7000"
+reconn = 30
+
+[tunnel.tcp1]
+local_addr = "192.168.1.1:22"
+remote_addr = "0.0.0.0:2222"
+key = "123456"

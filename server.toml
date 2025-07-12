@@ -1,0 +1,7 @@
+listen_port = 7000
+
+[tunnel.tcp1]
+key = "123456"
+
+[tunnel.tcp2]
+key = "654321"
