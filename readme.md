@@ -1,6 +1,4 @@
-
-
-    tcp_tunnel 是一个非常简单的tcp隧道程序，支持简单的xor混淆，写这个程序的目的是为了管理内网非常“丐”版的mips路由器，我试过xfrp和ngrok-c，体积还是大，索性写了这个简单的隧道程序，编译后体积很小，只有717K，upx压缩后351K。运行和配置非常简单。
+tcp_tunnel 是一个非常简单的tcp隧道程序，支持简单的xor混淆，写这个程序的目的是为了管理内网非常“丐”版的mips路由器，我试过xfrp和ngrok-c，体积还是大，索性写了这个简单的隧道程序，编译后体积很小，只有717K，upx压缩后351K。运行和配置非常简单。
 
 server端配置server.toml：
 
@@ -80,7 +78,7 @@ cargo build -Zbuild-std=std,panic_abort --bin server --release --target x86_64-w
 cargo build -Zbuild-std=std,panic_abort --bin client --release --target x86_64-win7-windows-gnu
 ```
 
-mipsel-musl
+**mipsel-musl**
 
 编译起来很繁琐，需要用buildroot编译mips little endian的gcc，然后编译相应的musl-gcc，还有libunwind，最后才能指定CC编译。注意查看.cargo/config.toml中的配置，最终编译命令如下：
 
