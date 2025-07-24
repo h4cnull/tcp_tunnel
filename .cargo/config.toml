@@ -1,0 +1,4 @@
+[target.mipsel-unknown-linux-musl]
+linker = "/mipsel-linux/musl/mipsel-musl-gcc"
+rustflags = ["-Z","location-detail=none", "-C","default-linker-libraries=yes","-C","target-feature=+crt-static","-C","target-feature=+soft-float","-C","link-arg=-static-libgcc","-L","/mipsel-linux/lib/gcc/mipsel-buildroot-linux-uclibc/7.2.0/","-L","/mipsel-linux/usr/lib","-L","/mipsel-linux/musl-1.2.4/lib","-L","/mipsel-linux/libunwind-1.8.0/src/.libs/"]
+
